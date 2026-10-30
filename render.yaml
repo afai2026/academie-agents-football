@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: academie-agents-football
+    runtime: static
+    buildCommand: npm ci && npm run build:static
+    staticPublishPath: ./dist
+    autoDeploy: false

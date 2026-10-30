@@ -1,0 +1,17 @@
+{
+  "name": "academie-agents-football",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site de présentation d'une académie indépendante de préparation aux examens d'agent de football",
+  "scripts": {
+    "start": "node server.js",
+    "build:static": "node scripts/build-static.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "pg": "^8.16.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#f7f5ef">
+    <title>Gestion des demandes — Académie Africaine des Agents de Football</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/admin.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement">Espace privé · validation manuelle des demandes <span aria-hidden="true">✦</span></div>
+    <header class="site-header admin-header">
+      <a class="brand" href="/" aria-label="Retour au site de l’académie">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span class="brand-name">Académie Africaine <strong>des Agents</strong></span>
+      </a>
+      <a class="header-cta" href="/">Retour au site <span aria-hidden="true">↗</span></a>
+    </header>
+    <main class="admin-page">
+      <section class="admin-intro">
+        <span class="eyebrow">GESTION DES DEMANDES</span>
+        <h1>Vous décidez<br><em>qui rejoint le groupe.</em></h1>
+        <p>Les demandes restent en attente jusqu’à votre décision. Une acceptation ou un refus n’envoie pas de message automatiquement : contactez la personne vous-même.</p>
+      </section>
+
+      <section class="admin-login" aria-labelledby="admin-login-title">
+        <h2 id="admin-login-title">Accès administrateur</h2>
+        <form id="admin-login-form">
+          <label for="admin-token">Clé administrateur configurée sur le serveur</label>
+          <input id="admin-token" name="token" type="password" autocomplete="current-password" minlength="32" required>
+          <button class="primary-button" type="submit">Ouvrir les demandes <span aria-hidden="true">→</span></button>
+        </form>
+        <p id="admin-status" class="admin-status" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="admin-requests" id="admin-requests" aria-labelledby="requests-title" hidden>
+        <div class="admin-list-heading">
+          <div><span class="eyebrow">DÉCISION MANUELLE</span><h2 id="requests-title">Demandes reçues</h2></div>
+          <div class="admin-tools">
+            <button class="admin-refresh" id="admin-refresh" type="button">Actualiser</button>
+            <button class="admin-logout" id="admin-logout" type="button">Fermer la session</button>
+          </div>
+        </div>
+        <div id="request-list" class="request-list"></div>
+      </section>
+      <p class="admin-privacy">Les coordonnées sont confidentielles. Utilisez-les uniquement selon le consentement donné, limitez les accès et supprimez les demandes qui ne sont plus nécessaires. Cet espace local n’est pas destiné à un déploiement public sans stockage sécurisé et HTTPS.</p>
+    </main>
+  </body>
+</html>
